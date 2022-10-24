@@ -29,6 +29,7 @@ import { useForm } from "react-hook-form";
 
 // material table
 import MaterialTable from 'material-table';
+import { Paper } from '@material-ui/core';
 
 import { forwardRef } from 'react';
 
@@ -58,6 +59,9 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { timelineItemClasses } from '@mui/lab/TimelineItem';
+
+
+// import muiStyleCustom from '../muiStyleCustom';
 
 
 const Sales_HiglightsNew = () => {
@@ -121,7 +125,7 @@ const Sales_HiglightsNew = () => {
 
     }, [])
 
-
+    // const classes = muiStyleCustom();
 
     return (
         // return wrapper div
@@ -146,7 +150,13 @@ const Sales_HiglightsNew = () => {
                                 <div className="grid md:grid-cols-2 gap-x-4 gap-y-1 ">
 
                                     <TextField sx={{ width: '100%' }} {...register("buyerName")} InputProps={{ style: { fontSize: 13 } }}
-                                        InputLabelProps={{ style: { fontSize: 14 } }} id="buyerName" label="Buyer Name" variant="standard" size="small" />
+                                        InputLabelProps={{
+                                            style: { fontSize: 14 },
+                                            // classes: {
+                                            //     root: classes.inputLabel,
+                                            //     focused: "focused"
+                                            // }
+                                        }} id="buyerName" label="Buyer Name" variant="standard" size="small" />
 
                                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                                         <DateTimePicker
@@ -161,7 +171,13 @@ const Sales_HiglightsNew = () => {
                                                     {...params}
                                                     {...register("date")}
                                                     InputProps={{ ...params.InputProps, style: { fontSize: 13 } }}
-                                                    InputLabelProps={{ ...params.InputLabelProps, style: { fontSize: 14 } }}
+                                                    InputLabelProps={{
+                                                        ...params.InputLabelProps, style: { fontSize: 14 },
+                                                        // classes: {
+                                                        //     root: classes.inputLabel,
+                                                        //     focused: "focused"
+                                                        // }
+                                                    }}
                                                     variant="standard"
                                                     size="small"
                                                 />}
@@ -175,7 +191,13 @@ const Sales_HiglightsNew = () => {
                                     </LocalizationProvider>
 
                                     <TextField sx={{ width: '100%' }} {...register("buyerAddress")} InputProps={{ style: { fontSize: 13 } }}
-                                        InputLabelProps={{ style: { fontSize: 14 } }} id="buyerAddress" label="Buyer Address" variant="standard" size="small" />
+                                        InputLabelProps={{
+                                            style: { fontSize: 14 },
+                                            // classes: {
+                                            //     root: classes.inputLabel,
+                                            //     focused: "focused"
+                                            // }
+                                        }} id="buyerAddress" label="Buyer Address" variant="standard" size="small" />
 
                                     <Autocomplete
                                         id="orderNo"
@@ -190,7 +212,13 @@ const Sales_HiglightsNew = () => {
                                                 {...params}
                                                 {...register("orderNo")}
                                                 InputProps={{ ...params.InputProps, style: { fontSize: 13 } }}
-                                                InputLabelProps={{ ...params.InputLabelProps, style: { fontSize: 14 } }}
+                                                InputLabelProps={{
+                                                    ...params.InputLabelProps, style: { fontSize: 14 },
+                                                    // classes: {
+                                                    //     root: classes.inputLabel,
+                                                    //     focused: "focused"
+                                                    // }
+                                                }}
                                                 onChange={(newValue) => {
                                                     console.log("autocomp Changed")
                                                 }}
@@ -199,7 +227,13 @@ const Sales_HiglightsNew = () => {
                                     />
 
                                     <TextField sx={{ width: '100%' }} {...register("prevDues")} InputProps={{ style: { fontSize: 13 } }}
-                                        InputLabelProps={{ style: { fontSize: 14 } }} id="prevDues" label="Previous Dues" variant="standard" size="small" />
+                                        InputLabelProps={{
+                                            style: { fontSize: 14 },
+                                            // classes: {
+                                            //     root: classes.inputLabel,
+                                            //     focused: "focused"
+                                            // }
+                                        }} id="prevDues" label="Previous Dues" variant="standard" size="small" />
 
                                     <Autocomplete
                                         id="terms"
@@ -214,7 +248,13 @@ const Sales_HiglightsNew = () => {
                                                 {...params}
                                                 {...register("terms")}
                                                 InputProps={{ ...params.InputProps, style: { fontSize: 13 } }}
-                                                InputLabelProps={{ ...params.InputLabelProps, style: { fontSize: 14 } }}
+                                                InputLabelProps={{
+                                                    ...params.InputLabelProps, style: { fontSize: 14 },
+                                                    // classes: {
+                                                    //     root: classes.inputLabel,
+                                                    //     focused: "focused"
+                                                    // }
+                                                }}
                                                 onChange={(newValue) => {
                                                     console.log("autocomp Changed")
                                                 }}
@@ -223,10 +263,22 @@ const Sales_HiglightsNew = () => {
                                     />
 
                                     <TextField sx={{ width: '100%' }} {...register("remarks")} InputProps={{ style: { fontSize: 13 } }}
-                                        InputLabelProps={{ style: { fontSize: 14 } }} id="remarks" label="Remarks" variant="standard" size="small" />
+                                        InputLabelProps={{
+                                            style: { fontSize: 14 },
+                                            // classes: {
+                                            //     root: classes.inputLabel,
+                                            //     focused: "focused"
+                                            // }
+                                        }} id="remarks" label="Remarks" variant="standard" size="small" />
 
                                     <TextField sx={{ width: '100%' }} {...register("value")} InputProps={{ style: { fontSize: 13 } }}
-                                        InputLabelProps={{ style: { fontSize: 14 } }} id="value" label="Value" variant="standard" size="small" />
+                                        InputLabelProps={{
+                                            style: { fontSize: 14 },
+                                            // classes: {
+                                            //     root: classes.inputLabel,
+                                            //     focused: "focused"
+                                            // }
+                                        }} id="value" label="Value" variant="standard" size="small" />
 
 
                                 </div>
@@ -238,7 +290,13 @@ const Sales_HiglightsNew = () => {
                                 <div className='grid grid-cols-2 gap-x-4 gap-y-1'>
 
                                     <TextField sx={{ width: '100%' }} {...register("invoiceNo")} InputProps={{ style: { fontSize: 13 } }}
-                                        InputLabelProps={{ style: { fontSize: 14 } }} id="invoiceNo" label="Invoice No." variant="standard" size="small" />
+                                        InputLabelProps={{
+                                            style: { fontSize: 14 },
+                                            // classes: {
+                                            //     root: classes.inputLabel,
+                                            //     focused: "focused"
+                                            // }
+                                        }} id="invoiceNo" label="Invoice No." variant="standard" size="small" />
 
                                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                                         <DateTimePicker
@@ -253,7 +311,13 @@ const Sales_HiglightsNew = () => {
                                                     {...params}
                                                     {...register("invoiceDate")}
                                                     InputProps={{ ...params.InputProps, style: { fontSize: 13 } }}
-                                                    InputLabelProps={{ ...params.InputLabelProps, style: { fontSize: 14 } }}
+                                                    InputLabelProps={{
+                                                        ...params.InputLabelProps, style: { fontSize: 14 },
+                                                        // classes: {
+                                                        //     root: classes.inputLabel,
+                                                        //     focused: "focused"
+                                                        // }
+                                                    }}
                                                     variant="standard"
                                                     size="small"
                                                 />}
@@ -279,7 +343,13 @@ const Sales_HiglightsNew = () => {
                                                 {...params}
                                                 {...register("pending")}
                                                 InputProps={{ ...params.InputProps, style: { fontSize: 13 } }}
-                                                InputLabelProps={{ ...params.InputLabelProps, style: { fontSize: 14 } }}
+                                                InputLabelProps={{
+                                                    ...params.InputLabelProps, style: { fontSize: 14 },
+                                                    // classes: {
+                                                    //     root: classes.inputLabel,
+                                                    //     focused: "focused"
+                                                    // }
+                                                }}
                                                 onChange={(newValue) => {
                                                     console.log("autocomp Changed")
                                                 }}
@@ -290,7 +360,13 @@ const Sales_HiglightsNew = () => {
                                     <TextField sx={{ width: '100%' }} {...register("invDiscount")}
 
                                         InputProps={{ style: { fontSize: 13 }, endAdornment: <InputAdornment position="end">%</InputAdornment>, inputMode: 'numeric', pattern: '[0-9]*' }}
-                                        InputLabelProps={{ style: { fontSize: 14 } }}
+                                        InputLabelProps={{
+                                            style: { fontSize: 14 },
+                                            // classes: {
+                                            //     root: classes.inputLabel,
+                                            //     focused: "focused"
+                                            // }
+                                        }}
                                         id="invDiscount"
                                         label="Invoice Discount"
                                         variant="standard"
@@ -298,7 +374,13 @@ const Sales_HiglightsNew = () => {
                                     />
 
                                     <TextField sx={{ width: '100%' }} {...register("vrNo")} InputProps={{ style: { fontSize: 13 } }}
-                                        InputLabelProps={{ style: { fontSize: 14 } }} id="vrNo" label="VR No." variant="standard" size="small" />
+                                        InputLabelProps={{
+                                            style: { fontSize: 14 },
+                                            // classes: {
+                                            //     root: classes.inputLabel,
+                                            //     focused: "focused"
+                                            // }
+                                        }} id="vrNo" label="VR No." variant="standard" size="small" />
 
                                     <Autocomplete
                                         id="paymentMode"
@@ -313,7 +395,13 @@ const Sales_HiglightsNew = () => {
                                                 {...params}
                                                 {...register("paymentMode")}
                                                 InputProps={{ ...params.InputProps, style: { fontSize: 13 } }}
-                                                InputLabelProps={{ ...params.InputLabelProps, style: { fontSize: 14 } }}
+                                                InputLabelProps={{
+                                                    ...params.InputLabelProps, style: { fontSize: 14 },
+                                                    // classes: {
+                                                    //     root: classes.inputLabel,
+                                                    //     focused: "focused"
+                                                    // }
+                                                }}
                                                 onChange={(newValue) => {
                                                     console.log("autocomp Changed")
                                                 }}
@@ -322,7 +410,13 @@ const Sales_HiglightsNew = () => {
                                     />
 
                                     <TextField sx={{ width: '100%' }} {...register("trackNo")} InputProps={{ style: { fontSize: 13 } }}
-                                        InputLabelProps={{ style: { fontSize: 14 } }} id="trackNo" label="Track No." variant="standard" size="small" />
+                                        InputLabelProps={{
+                                            style: { fontSize: 14 },
+                                            // classes: {
+                                            //     root: classes.inputLabel,
+                                            //     focused: "focused"
+                                            // }
+                                        }} id="trackNo" label="Track No." variant="standard" size="small" />
 
                                 </div>
                             </fieldset>
@@ -359,7 +453,13 @@ const Sales_HiglightsNew = () => {
                                         />
 
                                         <TextField sx={{ width: '100%' }} {...register("prodDresc")} InputProps={{ style: { fontSize: 13 } }}
-                                            InputLabelProps={{ style: { fontSize: 14 } }} id="prodDresc" label="Product Description" variant="standard" size="small" />
+                                            InputLabelProps={{
+                                                style: { fontSize: 14 },
+                                                // classes: {
+                                                //     root: classes.inputLabel,
+                                                //     focused: "focused"
+                                                // }
+                                            }} id="prodDresc" label="Product Description" variant="standard" size="small" />
 
                                     </div>
 
@@ -376,7 +476,13 @@ const Sales_HiglightsNew = () => {
                                                 {...params}
                                                 {...register("serial")}
                                                 InputProps={{ ...params.InputProps, style: { fontSize: 13 } }}
-                                                InputLabelProps={{ ...params.InputLabelProps, style: { fontSize: 14 } }}
+                                                InputLabelProps={{
+                                                    ...params.InputLabelProps, style: { fontSize: 14 },
+                                                    // classes: {
+                                                    //     root: classes.inputLabel,
+                                                    //     focused: "focused"
+                                                    // }
+                                                }}
                                                 onChange={(newValue) => {
                                                     console.log("autocomp Changed")
                                                 }}
@@ -385,7 +491,13 @@ const Sales_HiglightsNew = () => {
                                     />
 
                                     <TextField sx={{ width: '100%' }} {...register("quantity")} InputProps={{ style: { fontSize: 13 } }}
-                                        InputLabelProps={{ style: { fontSize: 14 } }} id="quantity" label="Qunatity" variant="standard" size="small" />
+                                        InputLabelProps={{
+                                            style: { fontSize: 14 },
+                                            // classes: {
+                                            //     root: classes.inputLabel,
+                                            //     focused: "focused"
+                                            // }
+                                        }} id="quantity" label="Qunatity" variant="standard" size="small" />
 
                                     <Autocomplete
                                         id="unitType"
@@ -400,7 +512,13 @@ const Sales_HiglightsNew = () => {
                                                 {...params}
                                                 {...register("unitType")}
                                                 InputProps={{ ...params.InputProps, style: { fontSize: 13 } }}
-                                                InputLabelProps={{ ...params.InputLabelProps, style: { fontSize: 14 } }}
+                                                InputLabelProps={{
+                                                    ...params.InputLabelProps, style: { fontSize: 14 },
+                                                    // classes: {
+                                                    //     root: classes.inputLabel,
+                                                    //     focused: "focused"
+                                                    // }
+                                                }}
                                                 onChange={(newValue) => {
                                                     console.log("autocomp Changed")
                                                 }}
@@ -409,15 +527,33 @@ const Sales_HiglightsNew = () => {
                                     />
 
                                     <TextField sx={{ width: '100%' }} {...register("cost")} InputProps={{ style: { fontSize: 13 } }}
-                                        InputLabelProps={{ style: { fontSize: 14 } }} id="cost" label="Cost" variant="standard" size="small" />
+                                        InputLabelProps={{
+                                            style: { fontSize: 14 },
+                                            // classes: {
+                                            //     root: classes.inputLabel,
+                                            //     focused: "focused"
+                                            // }
+                                        }} id="cost" label="Cost" variant="standard" size="small" />
 
                                     <TextField sx={{ width: '100%' }} {...register("price")} InputProps={{ style: { fontSize: 13 } }}
-                                        InputLabelProps={{ style: { fontSize: 14 } }} id="price" label="Price" variant="standard" size="small" />
+                                        InputLabelProps={{
+                                            style: { fontSize: 14 },
+                                            // classes: {
+                                            //     root: classes.inputLabel,
+                                            //     focused: "focused"
+                                            // }
+                                        }} id="price" label="Price" variant="standard" size="small" />
 
                                     <TextField sx={{ width: '100%' }} {...register("discount")}
 
                                         InputProps={{ style: { fontSize: 13 }, endAdornment: <InputAdornment position="end">%</InputAdornment>, inputMode: 'numeric', pattern: '[0-9]*' }}
-                                        InputLabelProps={{ style: { fontSize: 14 } }}
+                                        InputLabelProps={{
+                                            style: { fontSize: 14 },
+                                            // classes: {
+                                            //     root: classes.inputLabel,
+                                            //     focused: "focused"
+                                            // }
+                                        }}
                                         id="discount"
                                         label="Discount"
                                         variant="standard"
@@ -459,6 +595,9 @@ const Sales_HiglightsNew = () => {
                                                             icons={tableIcons}
                                                             columns={subColumns}
                                                             data={rowData.subTableData}
+                                                            components={{
+                                                                Container: props => <Paper {...props} elevation={0} />
+                                                            }}
                                                             options={{
                                                                 showTitle: false,
                                                                 search: false,
